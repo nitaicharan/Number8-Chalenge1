@@ -1,0 +1,35 @@
+.container {
+  border: 1px solid black;
+  margin: 1rem;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product {
+  display: flex;
+
+  &__name {
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    &--now {
+      font-size: 1.5rem;
+    }
+
+    &--retail {
+      font-size: 1rem;
+      margin: 1em;
+    }
+  }
+}

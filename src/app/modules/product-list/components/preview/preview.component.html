@@ -1,0 +1,13 @@
+<section class="container">
+    <div class="product">
+        <img [src]="product.ThumbnailURL" alt="thumbnail product" class="product__img">
+        <div class="product__price">
+            <h2 class="product__name">{{product.Name}}</h2>
+            <div>
+                <span class="product__price--now">{{product.Price | currency}}</span>
+                <span class="product__price--retail">{{product.RetailPrice | currency}}</span>
+            </div>
+        </div>
+    </div>
+    <a class="btn btn--green" [routerLink]="'/'+product.ProductID">View Details</a>
+</section>

@@ -1,0 +1,34 @@
+<app-modal></app-modal>
+<main class="container">
+    <section class="product" *ngIf="product$ | async as product">
+        <div class="product__metadata">
+            <img [src]="product.PictureURL" alt="" class="product__metadataimg">
+            <div class="buttons">
+                <a href="" class="btn btn--red">Clearance</a>
+                <a href="" class="btn btn--red">Free Shipping</a>
+            </div>
+            <div class="titles">
+                <p><span class="product__metadata--title">Brand: </span>{{product.Brand}}</p>
+                <p><span class="product__metadata--title">Color: </span>{{product.Color}}</p>
+            </div>
+        </div>
+
+        <div class="product__description">
+            <h1 class="product__description--title">{{product.Name}}</h1>
+            <img *ngFor="let start of getArrayNumbers(product.RatingAvg)" src="/assets/star.svg" alt="product rank"
+                class="product__description--stars">
+            <p class="product__description--body">{{product.Description}}</p>
+        </div>
+
+        <div class="product__price">
+            <div class="price">
+                <span class="product__price--now">{{product.Price | currency}}</span>
+                <span class="product__price--retail">{{product.RetailPrice | currency}}</span>
+            </div>
+            <div class="stock">
+                <span *ngIf="!(stock > 0)" class="product__price--stock">Out of Stock</span>
+                <a (click)="addToCart()" class="btn btn--green">Add to Cart</a>
+            </div>
+        </div>
+    </section>
+</main>

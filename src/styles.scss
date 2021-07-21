@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.btn {
+  padding: 0.5em 2em;
+  justify-self: center;
+  font-size: 1.5rem;
+  border-radius: 0.5em;
+
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: black;
+
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(90%);
+  }
+
+  &--green {
+    color: white;
+    background-color: green;
+    text-decoration: none;
+  }
+
+  &--red {
+    color: white;
+    background-color: red;
+    text-decoration: none;
+  }
+}
